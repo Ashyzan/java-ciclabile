@@ -23,11 +23,11 @@ public class InteriCiclabile {
 	public InteriCiclabile(int [] arrayInteriInput) {
 		 // costruttore che prende come parametro un array di interi
 //mp
-	System.out.println("numero posizioni array " + this.arrayInteri.length);
+	System.out.println("numero posizioni array " + arrayInteriInput.length);
 		for(int a : arrayInteriInput ) {
-		this.arrayInteri[this.numElementi] = a;
-   	   	System.out.println("assegno indice: " + this.numElementi + " al valore " + a);
-		this.numElementi++;
+			this.arrayInteri[this.numElementi] = a;
+			System.out.println("assegno indice: " + this.numElementi + " al valore " + a);
+			this.numElementi++;
 
    	   }
 	}
@@ -37,7 +37,7 @@ public class InteriCiclabile {
 //		
 //	}
 
-//mp
+
 	public int getNumeroElementi() {
 		return this.numElementi; 
 		
@@ -46,25 +46,15 @@ public class InteriCiclabile {
 
 
 	public int getElementoSuccessivo( ) { //restituisce l'elemento successivo all'elemento invocato, 
-
-		
-//		int[] b = new int[arrayInteri.length];
-
-
-//		for (int i=0; i<b.length; i++) {
-			
-//			posizioneArray =  posizioneArray ++;
-			
-//		}
-//MP inizio da 0
-			posizioneArray =  posizioneArray ++;
-			return this.arrayInteri [posizioneArray -1];
+			int temp = this.posizioneArray;
+			this.posizioneArray ++;
+			return this.arrayInteri [temp];
 		
 	} 
 	
 	public boolean hasAncoraElementi() {
 
-		if (posizioneArray == (this.arrayInteri.length -1) ) {
+		if (posizioneArray == (numElementi -1) ) {
 		return false;
 		} else 
 		return true;
@@ -74,16 +64,16 @@ public class InteriCiclabile {
 	
 	public void addElemento(int elemento) {
 	
-	this.numElementi++;	
 	this.arrayInteri[numElementi] = elemento;
+	
 	
 
 	for(int i=0; i<=this.numElementi; i++ ) {
-   	   	System.out.println("indice: " + i + " al valore " + this.arrayInteri[i]);
+   	   	System.out.println("indice: " + i + " valore " + this.arrayInteri[i]);
 		
 
    	   }
-		
+		this.numElementi++ ;	
 
 }
 

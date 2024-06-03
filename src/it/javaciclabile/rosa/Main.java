@@ -28,6 +28,8 @@ public class Main {
  	int elemento =18;
 	prova.addElemento(elemento);
 	
+	System.out.println("Stampo n. totale elementi che è " + prova.getNumeroElementi());
+	
 	
 	prova.toString();
 
